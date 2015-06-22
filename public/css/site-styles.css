@@ -1,0 +1,153 @@
+/*----------------------------------------*/
+/*				Common styles             */
+/*----------------------------------------*/
+	hr
+	{
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	h1
+	{
+	    font-size: 40px;
+	    padding: 20px 0px;
+	    color: #E74430;
+	}
+
+	h1 small
+	{
+		font-size: 21px;
+	}
+
+
+/*----------------------------------------*/
+/*			Navigation styles         	  */
+/*----------------------------------------*/
+
+	#main-nav
+	{
+		background-color: white;
+		border: none;
+	}
+
+	#main-logo
+	{
+		padding-left: 0px;
+		padding-right: 0px;
+		color: #E74430;
+		font-size: 25px;
+		font-weight: 700; 
+	}
+
+/*----------------------------------------*/
+/*	   Main Forum table layout styles     */
+/*----------------------------------------*/
+
+	.table-heading
+	{
+		font-size: 17px;
+		font-weight: 500;
+		letter-spacing: -1px;
+		color: #E74430;
+	}
+
+	.table-bordered > thead > tr > th
+	{
+		border-bottom: none;
+		border-right: none;
+	}
+
+	.table-bordered > thead > tr > .center,
+	.table-bordered > tbody > tr > .center
+	{
+	    vertical-align: middle;
+	    text-align: center;
+	    width: 15%;
+	}
+
+/*----------------------------------------*/
+/*	   	  Single forum page styles        */
+/*----------------------------------------*/
+	.forum-heading
+	{
+		font-size: 16px;
+		font-weight: 700;
+	}
+
+	.forum-topic-title
+	{
+		font-size: 18px;
+		font-weight: 500;
+	}
+
+	.forum-topic-description
+	{
+		font-size: 13px;
+	}
+
+	.table-bordered > tbody  > tr > td
+	{
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+
+	
+
+/*----------------------------------------*/
+/*	   	      Forum topic styles          */
+/*----------------------------------------*/
+	.forum .forum-post-panel 
+	{
+	    margin-bottom: 1em;
+	}
+
+	.forum.media-list li img.avatar 
+	{
+	    display: block;
+	    margin: 0 auto;
+	}
+
+	.forum.media-list li .user-info 
+	{
+	    text-align: center;
+	    width: 10em;
+	    height: 100%;
+	}
+
+	.forum.media-list li h1
+	{
+		padding: 0px;
+		color: #333;
+	}
+
+	.user-info small
+	{
+		display: block;
+		margin-top: 5px;
+	}
+	
+	.post-body blockquote
+	{
+		font-size: 12px;
+	}
+
+	.post-body
+	{
+		font-size: 16px;
+		font-weight: 400;
+		padding: 10px 0px;
+	}
+
+	@media (max-width: 760px) {
+	    .forum.media-list li .user-info {
+	        float: none;
+	        width: 100%;
+	        margin-bottom: 1em;
+	    }
+	}
+
+
+
+.new-message
+{
+	background-color: #D9EDF7;
+}
