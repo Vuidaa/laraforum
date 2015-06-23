@@ -4,11 +4,9 @@
 @include('pages.includes.breadcrumbs')
 @include('pages.includes.global')
 @foreach($sections as $section)
+<h2><a class='table-heading' href='{{ url('/',$section->slug) }}'>{{$section->title}}</a></h2>
 <table class="table table-bordered">
 	<thead>
-		<tr>
-			<th><a class='table-heading' href='{{ url('/',$section->slug) }}'>{{$section->title}}</a></th>
-		</tr>
 		<tr>
 			<th>Forum</th><th class='center'>Number of topics</th><th class='center'>Number of posts</th>
 		</tr>
@@ -33,9 +31,8 @@
 </table>
 @endforeach
 <div class="panel panel-default">
-  <div class="panel-body">
-  	<center><strong>Author - <a href="https://github.com/Vuidaa">Vuidaa</a></strong></center>
-  </div>
+	<div class="panel-body">
+		<center><strong>Author - <a href="https://github.com/Vuidaa">Vuidaa</a></strong></center>
+	</div>
 </div>
 @stop
-

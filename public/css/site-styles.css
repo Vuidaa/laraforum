@@ -53,7 +53,6 @@
 	.table-bordered > thead > tr > th
 	{
 		border-bottom: none;
-		border-right: none;
 	}
 
 	.table-bordered > thead > tr > .center,
