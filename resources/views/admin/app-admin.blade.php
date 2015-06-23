@@ -43,6 +43,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-12 col-md-12 col-lg-12">
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
                        		@yield('content')
                     </div>
                 </div>
@@ -53,14 +54,17 @@
 	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
-	<script>
-	    $("#menu-toggle").click(function(e) {
-	        e.preventDefault();
-	        $("#wrapper").toggleClass("toggled");
-	    });
-        $(document).ready( function () {    $('#table_id').DataTable();} );
-    </script>
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.6/js/jquery.dataTables.js"></script>
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#menu-toggle").click(function(e){
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+
+            $('#table_id').DataTable();
+    });
+</script>
 </body>
 </html>
