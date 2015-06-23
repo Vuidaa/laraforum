@@ -29,7 +29,7 @@
 			@foreach($topics as $topic)
 			<tr>
 				<td>
-					@if($topic->important === 1)
+					@if($topic->important == 1)
 					<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
 					@endif
 					<a class='forum-topic-title' href='{{ url('/', ['section'=>$section,'forum'=>$forum->slug,'topic'=>$topic->slug]) }}'>{{$topic->title}}</a>
