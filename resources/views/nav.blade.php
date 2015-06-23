@@ -14,7 +14,7 @@
       <li><a href="{{ url('member/login') }}">Login</a></li>
       <li><a href="{{ url('member/register') }}">Register</a></li>
       @else
-      @if(Auth::user()->admin === 1)
+      @if(Auth::user()->admin == 1)
       <li>
         <a href="{{ url('admin') }}"><span class='glyphicon glyphicon-list-alt' aria-hidden="true"></span> Admin</a>
       </li>
