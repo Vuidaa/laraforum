@@ -3,7 +3,7 @@
 @include('pages.includes.breadcrumbs')
 @include('pages.includes.global')
 <div class="row">
-	<div class="col-md-3 col-sm-6 col-xs-12">
+	<div class="col-md-3 col-sm-4 col-xs-12">
 		<div class="text-left">
 			<img src="{{asset('images/avatars/'.$user->avatar)}}" class="img-thumbnail" alt="avatar" >
 			<h6>Upload a different photo...</h6>
@@ -15,7 +15,7 @@
 			{!! Form::close() !!}
 		</div>
 	</div>
-	<div class='col-md-9'>
+	<div class='col-md-9 col-sm-8 col-xs-12'>
 		@include('pages.includes.errors')
 		<div role="tabpanel">
 			<!-- Nav tabs -->
