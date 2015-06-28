@@ -1,18 +1,21 @@
 <?php namespace App\Http\Controllers;
-
 use App\Section;
 use App\Forum;
 use App\Topic;
 use App\Post;
 use Request;
-
 class HomeController extends Controller
 {
 	public function index($section = null, $forum = null, $topic = null)
 	{
 		if($section === null)
 		{
-			return view('pages.index')->with('sections',Section::with('forums.topics')->get());
+			$sections = Section::all();
+			$sections->load(['forums.topics' => function ($query) {
+						$query->orderBy('updated_at', 'desc')->limit(1);
+						}]);
+			
+			return view('pages.index')->with('sections',$sections);
 		}
 		if(Section::where('slug', '=', $section)->exists())
 		{

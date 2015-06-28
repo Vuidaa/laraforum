@@ -8,7 +8,7 @@
 <table class="table table-bordered">
 	<thead>
 		<tr>
-			<th>Forum</th><th class='center'>Number of topics</th><th class='center'>Number of posts</th>
+			<th>Forum</th><th class='center'>Number of topics</th><th class='center'>Number of posts</th><th class='center'>Last activity</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -24,6 +24,16 @@
 			</td>
 			<td class='center'>
 				<b>{{$forum->posts()->count()}}</b> - Posts<br>
+			</td>
+			<td class='center'>
+				@if($forum->topics->first() == null)
+				Empty
+				@else
+				{{$forum->topics->first()->updated_at}} <br>
+				<a href="{{ url('/', ['section'=>$section->slug,'forum'=>$forum->slug,'topic'=>$forum->topics->first()->slug]) }}">
+					{{str_limit($forum->topics->first()->title, $limit = 25, $end = '...')}}
+				</a>
+				@endif
 			</td>
 		</tr>
 		@endforeach
