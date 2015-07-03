@@ -12,7 +12,7 @@ class HomeController extends Controller
 		{
 			$sections = Section::all();
 			$sections->load(['forums.topics' => function ($query) {
-						$query->orderBy('updated_at', 'desc')->limit(1);
+						$query->orderBy('updated_at', 'desc');
 						}]);
 			
 			return view('pages.index')->with('sections',$sections);
